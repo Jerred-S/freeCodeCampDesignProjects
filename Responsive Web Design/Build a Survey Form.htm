@@ -1,0 +1,105 @@
+
+<style>
+h1{
+  color: blue;
+}
+
+p{
+  color: blue;
+  font-size: larger;
+}
+[id*='label'] 
+{
+  font-weight: normal;
+  display: table; 
+}
+
+formPreamble{
+  font-weight: 900;
+  color: blue;
+}
+
+
+  
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  max-width: 100%;
+}
+    </style>
+
+</head>
+<body translate="no">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<main id="main">
+<h1 id="title">How do you enjoy your local water ways?</h1>
+
+<p id="description">Please take this survey to tell us how we (your local water ways) are used by you!</p>
+
+<formPreamble>Please let us know who you are.</formPreamble>
+<form id="survey-form">
+  <formReigion>
+
+  <label id="name-label" for="stuff">What is your name?</label>
+  <input id="name" type="text" required placeholder="My Name">
+  <br>
+
+  <label id="email-label" for="stuff">What is your email address?</label>
+  <input id="email" type="email" name="email" required placeholder="my.email@address.com">
+  <br>
+  <br>
+</formReigion>
+
+<formReigion>
+  <formPreamble>Tell us about... us!</formPreamble>
+  <label id="number-label" for="stuff">How often, annualy, do you visit your local waterways?</label>
+  <input id="number" type="number" min="0" max=366 required placeholder="0">
+  <br>
+
+  <div id="dropdown-label">What type of waterway do you most frequently visit?</div>
+  <select put id="dropdown">
+    <option value="Ocean">Ocean</option>
+    <option value="Wetland">Wetland, swamp, mash, bog, or bayou</option>
+    <option value="Lake">Lake</option>
+    <option value="River">River</option>
+    <option value="Pond">Pond</option>
+  </select>
+
+  <div id="radio-label">How salty is your most frequently visited waterway?</div>
+  <fieldset>
+      <legend>Choose one of these items:</legend>
+      <input id="fresh" type="radio" name="items" value="fresh">
+      <label for="fresh">Fresh</label><br>
+      <input id="brackish" type="radio" name="items" value="brackish">
+      <label for="brackish">Brackish</label><br>
+      <input id="seaSalt" type="radio" name="items" value="seaSalt">
+      <label for="seaSalt">Sea Saltines</label><br>
+      <input id="superSalt" type="radio" name="items" value="superSalt">
+      <label for="superSalt">Super Salty (e.g. Great Salt Lake, Dead Sea)</label>
+    </fieldset>
+    <br>
+
+    <div id="checkbox-label">In what aqueous state do you enjoy your waterway? Check all that apply.</div>
+    <fieldset>
+        <label><input type="checkbox" name="waterState" value="fullFrozen">Fully Frozen-Over</label>
+        <label><input type="checkbox" name="waterState" value="partialyFrozen">Partially Frozen</label>
+        <label><input type="checkbox" name="waterState" value="thawed">Completly Thawed</label><br>
+    </fieldset>
+    <br>
+
+    <div id="freetext-label">Tell us about your favorite activity with your waterway.</div>
+    <textarea rows="4" cols="50"></textarea>
+    <br>
+</formReigion>
+
+  <input id="submit" type="submit" name="submit" value="Submit">
+</form>
+
+</main>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+
+</body>
+</html>
