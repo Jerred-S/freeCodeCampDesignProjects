@@ -1,0 +1,119 @@
+<!-- https://codepen.io/anon/pen/GawWdw -->
+<style>
+      h1{
+  font-weight: bold;
+}
+
+
+
+:root{
+  --headerHeight: 100px;
+}
+
+:target:before {
+content:"";
+height:110px; /* fixed header height*/
+margin:-110px 0 0; /* negative fixed header height */
+margin-top: 110px;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  height: var(--headerHeight);
+  background-color: white;
+  border: 2px;
+  border-color: aliceblue;
+  border-style: solid;
+  width: 98%;
+}
+
+@media (max-height: 500px){
+  header{
+    position: unset;
+  }
+}
+
+header > img{
+  
+  margin-left: 50;
+  margin-right: auto;
+  max-width: 70px;
+}
+
+img
+{
+  max-width: 800px;
+}
+
+main{
+  margin-top: var(--headerHeight);
+}
+
+li {
+  list-style: none;
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+section{
+  
+  height:20em;
+  padding: 1em 2em;
+  display: table;
+}
+
+    </style>
+
+
+
+</head>
+<body translate="no">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<header id="header">
+    <img id="header-img" src="https://raw.githubusercontent.com/Jerred-S/freeCodeCampDesignProjects/master/Responsive%20Web%20Design/waterLogo.png" alt="Water's logo"/>Welcome to the Water!<br>
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link"href="#lakes">Lakes</a></li>
+        <li><a class="nav-link"href="#oceans">Oceans</a></li>
+        <li><a class="nav-link"href="#rivers">Rivers</a></li>
+      </ul>
+    </nav>
+</header>
+
+<main id="main">
+<section id="lakes">
+    <div id="body-text">Text about lakes</div>
+    <img id="lake-img" src="https://live.staticflickr.com/2369/3613369562_3f1e66f4cf_b.jpg" alt="Woodland lake wetland"/>
+  
+</section>
+
+<section id="oceans">
+    <div id="body-text">Text about oceans</div>
+    <img id="ocean-img" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ff838466196969.5b0df517edda2.jpg" alt="Ocean tidal wave"/>
+    
+</section>
+
+<section id="rivers">
+    <div id="body-text">Text about rivers</div>
+    <iframe id="video" width="600" height="330" src="https://www.youtube.com/embed/PwSHOI7DwWM?t=693" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<form id="form" action="https://www.freecodecamp.com/email-submit">
+    <label id="email-label" for="stuff">Let's stay in touch. Share your email address and get regular updates from us!</label>
+    <input id="email" type="email" name="email" placeholder="my.email@address.com">
+    <input id="submit" type="submit" name="submit" value="Submit">
+</form>
+
+
+</main>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+
+</body>
+</html>
