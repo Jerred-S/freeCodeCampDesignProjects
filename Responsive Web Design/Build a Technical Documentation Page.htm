@@ -1,15 +1,50 @@
 <!-- https://codepen.io/anon/pen/GawWdw -->
 <style>
-      header{
+
+:root{
+  --sideBarWidth: 250px;
+}
+
+header{
   font-weight: bold;
+  font-size: larger;
+}
+
+#navbar
+{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  max-width: var(--sideBarWidth);
+}
+
+main
+{
+  margin-left: var(--sideBarWidth);
+}
+
+@media (max-width: 800px){
+  #navbar{
+    position: unset;
+    max-width: unset;
+    margin-bottom: 2em;
+  }
+  
+  main{margin: unset;}
 }
 
 .icon
 {
-  width:55px;
-  height:55px;
-  white-space:nowrap;
+  width:25px;
+  height:25px;
+  margin:0px;
 }
+
+iconBlock
+{
+  display:flex;
+}
+
 
 img{
   display: block;
@@ -19,6 +54,11 @@ img{
   max-width: 100%;
 }
 
+.main-section
+{
+  margin-top: 2em;
+  
+}
 
 
 </style>
@@ -26,54 +66,86 @@ img{
 </head>
 <body translate="no">
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+
+<nav id="navbar">
+  <header>Water Enjoyment Guide</header>
+  <a class="nav-link" href="#Enjoy_the_Ocean_on_the_water">Enjoy the Ocean on the water</a>
+  <a class="nav-link" href="#Enjoy_the_Ocean_below_the_water">Enjoy the Ocean below the water</a>
+  <a class="nav-link" href="#Enjoy_a_lake_on_the_water">Enjoy a lake on the water</a>
+  <a class="nav-link" href="#Enjoy_a_river">Enjoy a river</a>
+  <a class="nav-link" href="#Essential_equipment">Essential equipment</a>
+</nav>
+
 <main id="main-doc">
-<header><header>Get out and enjoy your water way! Here's how to for each type.</header></header>
+<header>Get out and enjoy your water way! Here's how to for each type.</header>
 <section class="main-section" id="Enjoy_the_Ocean_on_the_water">
   <header>Enjoy the Ocean on the water</header>
   <p>There are many great ways to enjoy the ocean on the water.</p>
-    <img class="icon" src="sailing-boat.svg" />
-    <img class="icon" src="power-boat.svg" />
-    <img class="icon" src="kayak.svg" />
-    <img class="icon" src="swimming.svg" />
-    <img class="icon" src="cruise.svg" />
   <p>Sail and power boating, kayaking, or just swimming. Don't forget cruise ships!</p>
+    <iconBlock>
+      <img class="icon" src="sailing-boat.svg" />
+      <img class="icon" src="power-boat.svg" />
+      <img class="icon" src="kayak.svg" />
+      <img class="icon" src="swimming.svg" />
+      <img class="icon" src="cruise.svg" />
+    </iconBlock>
+  
   
 </section>
 <section class="main-section" id="Enjoy_the_Ocean_below_the_water">
   <header>Enjoy the Ocean below the water</header>
   <p>The ocean has abundant life just below the serface.</p>
-  <img class="icon" src="scuba-diving.svg" />
   <p>Grab your scuba gear and get under there!</p>
+  <iconBlock>
+    <img class="icon" src="scuba-diving.svg" />
+  </iconBlock>
+  
 </section>
 <section class="main-section" id="Enjoy_a_lake_on_the_water">
   <header>Enjoy a lake on the water</header>
   <p>Lakes have the same opportunites as the ocean, like sailing and power boating, kayaking, and swimming.</p> 
-    <img class="icon" src="sailing-boat.svg" />
-    <img class="icon" src="power-boat.svg" />
-    <img class="icon" src="kayak.svg" />
-    <img class="icon" src="swimming.svg" />
   <p>The relative calmness of some lakes also make canoeing possible too!
+    <iconBlock>
+      <img class="icon" src="sailing-boat.svg" />
+      <img class="icon" src="power-boat.svg" />
+      <img class="icon" src="kayak.svg" />
+      <img class="icon" src="swimming.svg" />
       <img class="icon" src="canoe.svg" />
+    </iconBlock>
 </section>
+
 <section class="main-section" id="Enjoy_a_river">
   <header>Enjoy a river</header>
   <p>Large rivers are deep enough for boats, but many are only deep enough for canoes and kayaks.</p>
-  <img class="icon" src="canoe.svg" />
-  <img class="icon" src="kayak.svg" />
   <p>Perhaps the best way to enjoy a river is from an innertube. Don't forget a tube for your cooler!</p>
-  <img class="icon" src="innertube.svg" />
+  <iconBlock>
+    <img class="icon" src="canoe.svg" />
+    <img class="icon" src="kayak.svg" />
+    <img class="icon" src="innertube.svg" />
+  </iconBlock>
 </section>
-<section class="main-section" id="Enjoy_water;_do_me_a_solid!">
-  <header>Enjoy water; do me a solid!</header>
-  <p>Colder climates feature frozen water. Sometimes its hard to tell where the body of water ends and land begins!</p>
-  <img class="icon" src="snowshoes.svg" />
-  <p> Grab your skis and snow shoes and carve a path through the white stuff!  </p>
+
+<section class="main-section" id="Essential_equipment">
+  <header>Essential equipment</header>
+  <p>There is some essential equipment you'll need for any trip on the water.</p>
+  <p>Safety first! Let's make sure you have essential life-saving devices.</p>
+  <li><code>Life Jacket</code></li>
+  <li><code>Whistle</code></li>
+  <li><code>First Aid Kit</code></li>
+  <li><code>Flares</code></li>
+  <li><code>Flashlight</code></li>
+  <li><code>Fire Extinguisher, if on a boat with a motor</code></li>
+  
 </section>
 
 </main>
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
 
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
+<br><br><br><br><br><br><br>
+<div style="font-size: xx-small">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</main>
 </body>
 </html>
