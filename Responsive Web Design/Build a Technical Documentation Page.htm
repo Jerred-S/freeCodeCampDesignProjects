@@ -3,11 +3,23 @@
 
 :root{
   --sideBarWidth: 250px;
+  font-family: sans-serif;
+  
+  background-image: url("waterBackground.lowRes.jpg");
+  background-size: cover;
+  
 }
 
 header{
   font-weight: bold;
   font-size: larger;
+  padding-bottom: 10px;
+  background: rgba(255,255,255,.7); 
+
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  
+  padding: 10px; 
 }
 
 #navbar
@@ -16,6 +28,17 @@ header{
   flex-direction: column;
   position: fixed;
   max-width: var(--sideBarWidth);
+  background: rgba(255,255,255,.5); 
+
+  border-radius: 25px;
+  padding: 20px; 
+  width: 200px;
+  
+}
+
+.nav-link
+{
+  padding-bottom: 10px;
 }
 
 main
@@ -28,6 +51,7 @@ main
     position: unset;
     max-width: unset;
     margin-bottom: 2em;
+    width: unset;
   }
   
   main{margin: unset;}
@@ -50,14 +74,19 @@ img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
   max-width: 100%;
 }
 
 .main-section
 {
+  display: flexbox;
+  flex-direction: column;
   margin-top: 2em;
-  
+  background: rgba(255,255,255,.5);
+
+  border-radius: 25px;
+  padding: 20px; 
+
 }
 
 
@@ -70,16 +99,19 @@ img{
 
 
 <nav id="navbar">
-  <header>Water Enjoyment Guide</header>
+  <header style="margin-bottom: 10px;">Water Enjoyment Guide</header>
   <a class="nav-link" href="#Enjoy_the_Ocean_on_the_water">Enjoy the Ocean on the water</a>
   <a class="nav-link" href="#Enjoy_the_Ocean_below_the_water">Enjoy the Ocean below the water</a>
-  <a class="nav-link" href="#Enjoy_a_lake_on_the_water">Enjoy a lake on the water</a>
+  <a class="nav-link" href="#Enjoy_a_lake">Enjoy a lake</a>
   <a class="nav-link" href="#Enjoy_a_river">Enjoy a river</a>
   <a class="nav-link" href="#Essential_equipment">Essential equipment</a>
 </nav>
 
 <main id="main-doc">
-<header>Get out and enjoy your water way! Here's how to for each type.</header>
+
+<header>Get out and enjoy your water way! Here's how to for each type</header>
+
+
 <section class="main-section" id="Enjoy_the_Ocean_on_the_water">
   <header>Enjoy the Ocean on the water</header>
   <p>There are many great ways to enjoy the ocean on the water.</p>
@@ -103,8 +135,8 @@ img{
   </iconBlock>
   
 </section>
-<section class="main-section" id="Enjoy_a_lake_on_the_water">
-  <header>Enjoy a lake on the water</header>
+<section class="main-section" id="Enjoy_a_lake">
+  <header>Enjoy a lake</header>
   <p>Lakes have the same opportunites as the ocean, like sailing and power boating, kayaking, and swimming.</p> 
   <p>The relative calmness of some lakes also make canoeing possible too!
     <iconBlock>
@@ -146,6 +178,8 @@ img{
 
 <br><br><br><br><br><br><br>
 <div style="font-size: xx-small">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<br>
+<p style="font-size: xx-small;font-style: italic;"><a href="https://www.flickr.com/photos/34016208@N05/4319997520">"Bubbles"</a><span>by <a href="https://www.flickr.com/photos/34016208@N05">Benjamin Dobson</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;opacity: .7;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://ccsearch.creativecommons.org/static/img/cc_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://ccsearch.creativecommons.org/static/img/cc-by_icon.svg" /></a></p>
 </main>
 </body>
 </html>
