@@ -21,15 +21,10 @@ header{
   padding: 10px; 
 }
 
-
-
 .nav-link
 {
   padding-bottom: 10px;
 }
-
-
-
 
 .icon
 {
@@ -63,4 +58,9 @@ img{
 
 }
 
-
+body::after
+{
+  font-size: xx-small;
+  font-style: italic;
+  content: "Background image Bubbles https://www.flickr.com/photos/34016208@N05/4319997520 by Benjamin Dobson is licensed under CC BY 2.0 https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html"
+}
