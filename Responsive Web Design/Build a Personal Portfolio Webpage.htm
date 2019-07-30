@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="./style.css">
+
+<style>
+
+
+:root{
+  --topBarHeight: 100px;
+}
+
+:target:before {
+content:"";
+height:110px; /* fixed topBar height*/
+margin:-110px 0 0; /* negative fixed topBar height */
+margin-top: 110px;
+}
+
+topBar{
+  position: fixed;
+  top: 0;
+  height: var(--topBarHeight);
+  border: 2px;
+  border-color: aliceblue;
+  border-style: solid;
+  width: 98%;
+  background: rgba(255,255,255,.9);
+}
+
+@media (max-height: 500px){
+    :root{
+    --topBarHeight: 50px;
+  }
+}
+
+main{
+  margin-top: var(--topBarHeight);
+  background: rgba(255,255,255,.6);
+  
+}
+
+#welcome-section
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+</style>
+
+<topBar>
+
+    <nav id="navbar">
+        <header>Hello</header>
+        <a class="nav-link" href="#projects">My Projects</a>
+        <a class="nav-link" href="#profile">My Profile</a>
+    </nav>
+</topBar>
+
+<body translate="no">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<main>
+
+        <section id="welcome-section">
+                <h1>Welcome</h1>
+            </section>
+
+
+<section class="main-section" id="projects">
+    <header>Here are projects</header>
+    <p class="project-tile ">A dam. (I didn't build this.)</p>
+    <a href="https://en.wikipedia.org/wiki/Salmon_Falls_Dam"><img style="width:400px;" src="dam.jpg"/>That's one big dam... dam.</a>
+</section>
+
+<section id="profile">
+    <header>See my FreeCodeCamp profile</header>
+    <a id="profile-link" href="https://www.freecodecamp.org/jerred" target="_blank">Jerred</a>
+</section>
+
+</main>
+<p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/23487245@N08/5715160496">"[IDAHO-A-0301] Salmon Falls Dam"</a><span>by <a href="https://www.flickr.com/photos/23487245@N08">waterarchives</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-SA 2.0</a><a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;opacity: .7;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+</body>
